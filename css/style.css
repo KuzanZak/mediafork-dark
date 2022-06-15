@@ -99,12 +99,12 @@ body.template-dark {
     z-index: 100;
 }
 
-.header-container {
+/* .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-}
+}  */
 
 
 /* HEADER -> LOGO */
@@ -126,11 +126,11 @@ body.template-dark {
 
 /* HEADER -> NAV */
 
-.nav-burger {
+/* .nav-burger {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
-}
+} */
 
 .nav-list {
     display: none;
@@ -167,6 +167,10 @@ body.template-dark {
     color: var(--transparent-white);
 }
 
+.nav-burger-mobile{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .nav-burger {
         display: none; 
@@ -177,59 +181,64 @@ body.template-dark {
 }
 
 
-/* NAV MOBILE */ 
-.nav-list-mobile {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-}
+/* NAV MOBILE */
+@media screen and (max-width: 767px) {
 
-.nav-link-mobile {
-    display: inline-block;
-    position: relative;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: border var(--transition-duration) var(--transition-function);
-}
-
-.nav-link-mobile::after {
-    content: "";
-    display: block;
-    height: .25rem;
-    width: 0;
-    position: absolute;
-    left: 0;
-    bottom: -.5rem;
-    background-color: var(--primary-color);
-    transition: width .3s ease;
-}
-
-.nav-link-mobile.active::after, .nav-link:hover::after  {
-    width: 100%;
-}
-
-.nav-link-mobile.active {
-    color: var(--transparent-white);
-}
-
-@media screen and (max-width: 768px) {
-    .nav-burger {
-        display: none; 
-    }
-    .nav-list-mobile {
+    .nav-list {
+        gap: 5rem;
+        position: absolute;
         display: flex;
         flex-direction: column;
+        /* flex-wrap: nowrap; */
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-right: 50%;
+        /* margin-left: auto; */
+        width: 100%;
+        margin-top: 15%;
+        z-index: 500;
     }
-      
-    .nav-link-mobile {
-        display: flex;
+    .nav-burger-mobile{
+        font-size: 3rem;
+        color: var(--primary-color);
+        cursor: pointer;
     }
     
-    .nav-link-mobile::after {
+    /* .nav-link {
+        display: inline-block;
+        position: relative;
+        z-index: 500;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: border var(--transition-duration) var(--transition-function);
+    }
+    
+    .nav-link::after {
+        content: "";
+        display: block;
+        height: .25rem;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: var(--primary-color);
+        transition: width .3s ease;
+    }
+    
+    .nav-link.active::after, .nav-link:hover::after  {
+        width: 100%;
+    }
+    
+    .nav-link.active {
+        color: var(--transparent-white);
+    } */
+
+    .nav-burger-mobile{
         display: flex;
     }
 }
+
 
 /* HERO BANNER */
 
