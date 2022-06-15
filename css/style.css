@@ -176,6 +176,61 @@ body.template-dark {
     }
 }
 
+
+/* NAV MOBILE */ 
+.nav-list-mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-link-mobile {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: border var(--transition-duration) var(--transition-function);
+}
+
+.nav-link-mobile::after {
+    content: "";
+    display: block;
+    height: .25rem;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    background-color: var(--primary-color);
+    transition: width .3s ease;
+}
+
+.nav-link-mobile.active::after, .nav-link:hover::after  {
+    width: 100%;
+}
+
+.nav-link-mobile.active {
+    color: var(--transparent-white);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-burger {
+        display: none; 
+    }
+    .nav-list-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+      
+    .nav-link-mobile {
+        display: flex;
+    }
+    
+    .nav-link-mobile::after {
+        display: flex;
+    }
+}
+
 /* HERO BANNER */
 
 .hero-banner {
