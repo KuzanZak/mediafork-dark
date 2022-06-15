@@ -126,12 +126,12 @@ body.template-dark {
 
 /* HEADER -> NAV */
 
-/* .nav-burger {
+.nav-burger {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
-} */
-
+}
+/* 
 .nav-list {
     display: none;
     align-items: center;
@@ -182,7 +182,7 @@ body.template-dark {
 
 
 /* NAV MOBILE */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
 
     .nav-list {
         gap: 5rem;
@@ -200,9 +200,9 @@ body.template-dark {
     .nav-burger-mobile{
         font-size: 3rem;
         color: var(--primary-color);
-        cursor: pointer;
-    }
-    
+        cursor: pointer; */
+    /* } */
+
     /* .nav-link {
         display: inline-block;
         position: relative;
