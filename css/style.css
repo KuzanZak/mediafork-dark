@@ -99,12 +99,12 @@ body.template-dark {
     z-index: 100;
 }
 
-/* .header-container {
+.header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem 2rem;
-}  */
+} 
 
 
 /* HEADER -> LOGO */
@@ -130,21 +130,29 @@ body.template-dark {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
+    display: none; /* l'enlever quand j'ai fini de code la nav bar*/
 }
-/* 
+ 
 .nav-list {
-    display: none;
+    position: absolute;
+    display: flex;
+    margin-left: 11%;
+    margin-top: 8%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2.5rem;
+    z-index: 500;
 }
 
 .nav-link {
     display: inline-block;
     position: relative;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: border var(--transition-duration) var(--transition-function);
+    border-bottom: 1px solid var(--transparent-white);
+    width: 100%;
 }
 
 .nav-link::after {
@@ -154,9 +162,9 @@ body.template-dark {
     width: 0;
     position: absolute;
     left: 0;
-    bottom: -.5rem;
+    /* bottom: -.5rem;
     background-color: var(--primary-color);
-    transition: width .3s ease;
+    transition: width .3s ease; */
 }
 
 .nav-link.active::after, .nav-link:hover::after  {
@@ -167,17 +175,33 @@ body.template-dark {
     color: var(--transparent-white);
 }
 
-.nav-burger-mobile{
-    display: none;
-}
-
 @media screen and (min-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    } 
     .nav-burger {
         display: none; 
     }
     .nav-list {
+        position: relative;
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
     }
+    .nav-link {
+        font-size: 1.5rem;
+    }
+    .nav-link:after{
+        bottom: -.5rem;
+        background-color: var(--primary-color);
+        transition: width .3s ease;
+    }
+
 }
 
 
@@ -232,10 +256,10 @@ body.template-dark {
         color: var(--transparent-white);
     } */
 
-    .nav-burger-mobile{
+    /* .nav-burger-mobile{
         display: flex;
     }
-}
+} */
 
 
 /* HERO BANNER */

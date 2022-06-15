@@ -1,20 +1,23 @@
-const button = document.querySelector(".nav-burger");
+const buttonBurger = document.querySelector(".nav-burger");
 
-const ulNav = document.querySelector(".nav-list")
+const ulNav = document.querySelector(".nav-list .nav-item .nav-link")
+console.log(ulNav)
 
-const ulNavMobile = document.createElement("ul")
-const bodyHtml = document.querySelector(".template-dark")
-const div = document.querySelector(".hero-banner")
-// console.log(ulNavMobile)
-document.body.insertBefore(ulNavMobile, div)
-// console.log(ulNavMobile)
 const buttonI = document.querySelector(".nav-burger > i");
-console.log(buttonI)
-button.addEventListener("click", function(event){
-    ulNavMobile.innerHTML = ulNav.innerHTML
+// console.log(buttonI)
+
+const headerContainer = document.querySelector(".header-container")
+console.log(headerContainer)
+
+
+
+buttonBurger.addEventListener("click", function(event){
+    
     buttonI.classList.toggle("fa-bars");
     buttonI.classList.toggle("fa-angle-up");
-
-    console.log("click")
+    // headerContainer.style.justifyContent ="flex-start";
+    // ulNav.style.display ="flex";
+    // ulNav.style.marginLeft ="0%"
+    // console.log("click")
 })
 
