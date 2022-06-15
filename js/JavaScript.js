@@ -1,6 +1,17 @@
-const button = document.querySelector(".nav-burger");
-console.log(button);
+// const button = document.querySelector(".nav-burger");
 
-button.addEventListener("click", function(event){
-    console.log("click")
-})
+// const ulNav = document.querySelector(".nav-list")
+
+// const ulNavMobile = document.createElement("ul")
+// const bodyHtml = document.querySelector(".template-dark")
+// const div = document.querySelector(".hero-banner")
+// console.log(ulNavMobile)
+// document.body.insertBefore(ulNavMobile, div)
+// // console.log(ulNavMobile)
+
+// button.addEventListener("click", function(event){
+//     ulNavMobile.innerHTML = ulNav.innerHTML
+//     ulNavMobile.innerHTML.style.
+//     console.log("click")
+// })
+
