@@ -189,12 +189,10 @@ body.template-dark {
         position: absolute;
         display: flex;
         flex-direction: column;
-        /* flex-wrap: nowrap; */
         justify-content: center;
         align-items: center;
         align-content: center;
         margin-right: 50%;
-        /* margin-left: auto; */
         width: 100%;
         margin-top: 15%;
         z-index: 500;
