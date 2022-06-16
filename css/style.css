@@ -139,13 +139,13 @@ body.template-dark {
     position: absolute;
     z-index: 500;
     display: none;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0;
-    height: 100vh;
-    left: 0;
+    height: 90vh;
     width: 100vw;
+    left: 0;
     top: 72.5px;
     background-color: var(--dark-black-transparent);
 }
