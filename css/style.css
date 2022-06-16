@@ -155,6 +155,8 @@ body.template-dark {
     align-items: center;
     justify-content: center;
     height: 7.2rem;
+    border-bottom: 1px solid white;
+    width: 100vw;
 }
 
 .nav-link {
@@ -162,7 +164,6 @@ body.template-dark {
     color: #fff;
     font-size: 2rem;
     transition: border var(--transition-duration) var(--transition-function);
-    /* border-bottom: 1px solid var(--transparent-white); */
     width: 100%;
     text-align: center;
 }
