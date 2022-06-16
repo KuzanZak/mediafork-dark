@@ -154,7 +154,7 @@ body.template-dark {
 
 @media screen and (max-width: 767px){
     .transition{
-        transition: 1s height 0.3s;
+        transition-property: position 2s;
     }
     .nav-list{
         position: absolute;
