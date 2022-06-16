@@ -145,7 +145,7 @@ body.template-dark {
     height: 100vh;
     left: 0;
     width: 100vw;
-    top: 72.5px;
+    top: 73px;
     background-color: var(--dark-grey-transparent);
 }
 
@@ -328,7 +328,6 @@ body.template-dark {
     font-size: 3rem;
 }
 
-
 /* ABOUT SECTION */
 
 .about {
@@ -367,10 +366,7 @@ body.template-dark {
     }
 }
 
-
-
 /* SERVICES */
-
 .cards-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -723,8 +719,20 @@ body.template-dark {
             background-color: transparent;
             height: auto;
             width: auto;
+            gap: 2.5rem;
+            left: auto;
+            top: auto;
         }
-    
+        
+        /* .nav-item{
+
+        }
+        .nav-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 7.2rem;
+        } */
     
        
         .nav-link {
