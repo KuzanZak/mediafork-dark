@@ -10,9 +10,18 @@ function overflow(){
     }
 }
 
+function transition(){
+    if (buttonI.classList.contains("fa-angle-up")){
+        ulNav.classList.add("transition")
+    } else{
+        ulNav.classList.remove("transition")
+    }
+}
+
 buttonBurger.addEventListener("click", function(event){
     ulNav.classList.toggle("display")
     buttonI.classList.toggle("fa-angle-up");
     buttonI.classList.toggle("fa-bars");
     overflow()
+    transition()
 });

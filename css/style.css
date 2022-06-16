@@ -153,6 +153,9 @@ body.template-dark {
 
 
 @media screen and (max-width: 767px){
+    .transition{
+        transition: 1s height 0.3s;
+    }
     .nav-list{
         position: absolute;
         z-index: 500;
@@ -161,7 +164,6 @@ body.template-dark {
         justify-content: flex-start;
         gap: 0;
         height: 90vh;
-        overflow: hidden;
         width: 100vw;
         left: 0;
         top: 72.5px;
