@@ -7,7 +7,9 @@ const buttonI = document.querySelector(".nav-burger > i");
 // console.log(buttonI)
 
 const headerContainer = document.querySelector(".header-container")
-console.log(headerContainer)
+// console.log(headerContainer)
+
+const bodyDark = document.querySelector("template-dark");
 
 function navAppear(){
     if (ulNav.style.display === "flex") {
@@ -16,19 +18,21 @@ function navAppear(){
         ulNav.style.display = "flex";
     }
 }
-// function navPosition(){
-//     if (ulNav.style.position === "relative") {
-//         ulNav.style.position ="absolute";
-//     } else {
-//         ulNav.style.position = "relative";
-//     }
-// }
+
+function switchButton(){
+    buttonI.classList.toggle("fa-angle-up");
+    if (buttonI.classList.contains("fa-angle-up")) buttonI.classList.add("active")
+    buttonI.classList.toggle("fa-bars");
+}
+
+function overflow(){
+    if (buttonI.classList.contains("active")) {
+        bodyDark.style.overflowY = "hidden";
+    }
+}
 
 buttonBurger.addEventListener("click", function(event){
-    buttonI.classList.toggle("fa-bars");
-    buttonI.classList.toggle("fa-angle-up");
+    switchButton()
     navAppear()
-    headerContainer.appendChild(this);
-    // navPosition()
-})
-
+    overflow()
+});
