@@ -9,25 +9,20 @@ const buttonI = document.querySelector(".nav-burger > i");
 const headerContainer = document.querySelector(".header-container")
 // console.log(headerContainer)
 
-const bodyDark = document.querySelector("template-dark");
+const bodyDark = document.body;
 
 function navAppear(){
-    if (ulNav.style.display === "flex") {
-        ulNav.style.display ="none";
-    } else {
-        ulNav.style.display = "flex";
-    }
+    ulNav.classList.toggle("display")
 }
 
 function switchButton(){
     buttonI.classList.toggle("fa-angle-up");
-    if (buttonI.classList.contains("fa-angle-up")) buttonI.classList.add("active")
     buttonI.classList.toggle("fa-bars");
 }
 
 function overflow(){
-    if (buttonI.classList.contains("active")) {
-        bodyDark.style.overflowY = "hidden";
+    if (ulNav.classList.contains("display")) {
+        bodyDark.classList.add("overflow");
     }
 }
 
