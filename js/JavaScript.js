@@ -16,12 +16,19 @@ function navAppear(){
         ulNav.style.display = "flex";
     }
 }
+// function navPosition(){
+//     if (ulNav.style.position === "relative") {
+//         ulNav.style.position ="absolute";
+//     } else {
+//         ulNav.style.position = "relative";
+//     }
+// }
 
 buttonBurger.addEventListener("click", function(event){
     buttonI.classList.toggle("fa-bars");
     buttonI.classList.toggle("fa-angle-up");
     navAppear()
     headerContainer.appendChild(this);
-    ulNav.style.position = "absolute";
+    // navPosition()
 })
 
