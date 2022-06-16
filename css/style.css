@@ -131,96 +131,76 @@ body.template-dark {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
-    display: flex; /* l'enlever quand j'ai fini de code la nav bar*/
+    display: flex;
 }
  
 .nav-list {
-    /* position: absolute; */
-    position: absolute;
-    z-index: 500;
     display: none;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0;
-    height: 90vh;
-    width: 100vw;
-    left: 0;
-    top: 72.5px;
-    background-color: var(--dark-black-transparent);
 }
 
 .nav-item{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 7.2rem;
-    border-bottom: 1px solid white;
-    width: 100vw;
 }
 
 .nav-link {
     display: block;
     color: #fff;
-    font-size: 2rem;
-    transition: border var(--transition-duration) var(--transition-function);
-    width: 100%;
     text-align: center;
 }
 
-.nav-link::after {
-    content: "";
-    display: block;
-    height: .25rem;
-    width: 0;
-    position: absolute;
-    left: 0;
-    /* bottom: -.5rem;
-    background-color: var(--primary-color);
-    transition: width .3s ease; */
-}
 
-.nav-link.active::after, .nav-link:hover::after  {
-    width: 100%;
-}
-
-.nav-link.active {
-    color: var(--transparent-white);
-}
-
-
-
-/* NAV MOBILE */
-/* @media screen and (max-width: 767px) {
-    
+@media screen and (max-width: 767px){
     .nav-list {
-        gap: 5rem;
         position: absolute;
-        display: flex;
+        z-index: 500;
+        display: none;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin-right: 50%;
-        width: 100%;
-        margin-top: 15%;
-        z-index: 500;
+        justify-content: flex-start;
+        gap: 0;
+        height: 90vh;
+        width: 100vw;
+        left: 0;
+        top: 72.5px;
     }
-    .nav-burger-mobile{
-        font-size: 3rem;
-        color: var(--primary-color);
-        cursor: pointer; */
-    /* } */
-
-    /* .nav-link {
-        display: inline-block;
-        position: relative;
-        z-index: 500;
-        color: #fff;
-        font-size: 1.5rem;
-        transition: border var(--transition-duration) var(--transition-function);
+    .nav-item{
+        height: 7.2rem;
+        border-bottom: 1px solid white;
+        width: 100vw;
+    }
+    .nav-link {
+        font-size: 2rem;
+        width: 100%;
     }
     
+    
+}
+
+@media screen and (min-width: 768px) {
+    .nav-burger {
+        display: none; 
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+        height: auto;
+        background-color: none;
+
+    }
+    .nav-item{
+        height: auto;
+        border-bottom: none;
+    }
+    .nav-link{
+        transition: border var(--transition-duration) var(--transition-function);
+        font-size: 1.5rem;
+    }
+
     .nav-link::after {
         content: "";
         display: block;
@@ -239,12 +219,8 @@ body.template-dark {
     
     .nav-link.active {
         color: var(--transparent-white);
-    } */
-
-    /* .nav-burger-mobile{
-        display: flex;
-    }
-} */
+    } 
+};
 
 
 /* HERO BANNER */
@@ -700,50 +676,3 @@ body.template-dark {
         background-color: var(--instagram-color);
     }
 }
-    @media screen and (min-width: 768px) {
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        } 
-        .nav-burger {
-            display: none; 
-        }
-        .nav-list {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            z-index: 0;
-            background-color: transparent;
-            height: auto;
-            width: auto;
-            gap: 2.5rem;
-            left: auto;
-            top: auto;
-        }
-        
-        /* .nav-item{
-
-        }
-        .nav-item{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 7.2rem;
-        } */
-    
-       
-        .nav-link {
-            font-size: 1.5rem;
-        }
-        .nav-link:after{
-            bottom: -.5rem;
-            background-color: var(--primary-color);
-            transition: width .3s ease;
-        }
-    
-    }
