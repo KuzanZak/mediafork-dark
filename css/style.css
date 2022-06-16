@@ -130,7 +130,7 @@ body.template-dark {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
-    display: none; /* l'enlever quand j'ai fini de code la nav bar*/
+    display: flex; /* l'enlever quand j'ai fini de code la nav bar*/
 }
  
 .nav-list {
@@ -158,7 +158,7 @@ body.template-dark {
     color: #fff;
     font-size: 2rem;
     transition: border var(--transition-duration) var(--transition-function);
-    border-bottom: 1px solid var(--transparent-white);
+    /* border-bottom: 1px solid var(--transparent-white); */
     width: 100%;
     text-align: center;
 }

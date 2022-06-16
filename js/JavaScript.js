@@ -23,6 +23,8 @@ buttonBurger.addEventListener("click", function(event){
     buttonI.classList.toggle("fa-angle-up");
     // headerContainer.style.justifyContent ="flex-start";
     navAppear()
+    // document.body.insertBefore(buttonI, )
+    headerContainer.appendChild(this);
     // ulNav.style.display ="flex";
     // ulNav.style.marginLeft ="0%"
     // console.log("click")
