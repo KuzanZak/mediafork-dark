@@ -11,6 +11,7 @@
     --main-bg: #151617;
     --dark-grey: #313335;
     --dark-grey-transparent: rgba(49, 51, 53, 0.7);
+    --dark-black-transparent: rgba(0, 0, 0, 0.7);
     --light-grey: #7a8085;
 
     /* Special colors */
@@ -145,8 +146,8 @@ body.template-dark {
     height: 100vh;
     left: 0;
     width: 100vw;
-    top: 73px;
-    background-color: var(--dark-grey-transparent);
+    top: 72.5px;
+    background-color: var(--dark-black-transparent);
 }
 
 .nav-item{
