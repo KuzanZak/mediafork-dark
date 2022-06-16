@@ -153,9 +153,6 @@ body.template-dark {
 
 
 @media screen and (max-width: 767px){
-    .overflow{
-        overflow-y: hidden;
-    }
     .nav-list{
         position: absolute;
         z-index: 500;
@@ -170,11 +167,11 @@ body.template-dark {
         top: 72.5px;
         background-color: var(--dark-black-transparent);
     }
-
+    
     .display{
         display: flex;
     }
-
+    
     .nav-item{
         height: 7.2rem;
         z-index: 500;
@@ -195,6 +192,9 @@ body.template-dark {
         background-size: cover;
         background-position: top center;
         background-attachment: fixed;
+    }
+    .overflow{
+        overflow-y: hidden;
     }
     
 }
