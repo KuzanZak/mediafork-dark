@@ -11,11 +11,12 @@
     --main-bg: #151617;
     --dark-grey: #313335;
     --dark-grey-transparent: rgba(49, 51, 53, 0.7);
-    --dark-black-transparent: rgba(0, 0, 0, 0.7);
     --light-grey: #7a8085;
-
+    
     /* Special colors */
     --transparent-white: rgba(255, 255, 255, 0.5);
+    --transparent-black: rgba(0, 0, 0, 0.5);
+    --transparent-black75: rgba(0, 0, 0, 0.75);
 
     /* Social colors */
     --facebook-color: #3b5998;
@@ -96,6 +97,7 @@ body.template-dark {
     width: 100%;
     background-color: rgba(0, 0, 0, .5);
     border-bottom: 1px solid var(--transparent-white);
+    background-color: var(--transparent-black);
     z-index: 100;
 }
 
@@ -163,12 +165,31 @@ body.template-dark {
         flex-direction: column;
         justify-content: flex-start;
         gap: 0;
-        height: 90vh;
+        height: 100vh;
         width: 100vw;
         left: 0;
-        top: 72.5px;
-        background-color: var(--dark-black-transparent);
+        top: 6.08rem;
+        background-color: var(--transparent-black75);
     }
+
+    /* .nav-list{
+        position: absolute;
+        top: calc(6rem + 1px); 
+        left:0; 
+        width: 100%;
+        text-align: center;
+        background-color: var(--transparent-black75); 
+        height: 100vh;
+    } 
+        .nav-item{
+        border-bottom: 1px solid var(--transparent-white);
+    }
+        .nav-link{
+        display: block; /* ou inline-block
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+    */
     
     .display{
         display: flex;
