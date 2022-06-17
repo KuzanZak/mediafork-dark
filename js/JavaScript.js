@@ -1,7 +1,6 @@
 const mobileButton = document.getElementById("mobile-button");
 const mainNav = document.getElementById("main-nav");
 const mobileIcon = document.getElementById("mobile-icon");
-const navLinks = document.querySelectorAll("#main-nav a")
 
 // function overflow(){
 //     if (mainNav.classList.contains("display")) {
@@ -53,3 +52,11 @@ mainNav.addEventListener("click", function (event){
 window.addEventListener("resize", function(event){
     if (window.innerWidth >= 768) resetNew();
 })
+
+// Services 
+const cardsList = document.getElementById("cards-list")
+console.log(cardsList)
+cardsList.addEventListener("click", function(event){
+    if (event.target.classList.contains("card")) console.log("click");
+})
+
