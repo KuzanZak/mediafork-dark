@@ -390,20 +390,18 @@ body.overflow{
     }
 }
 
-/* SERVICES */
+
+
+
+
+
+
+                            /* SERVICES */
 .cards-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     padding: 0 2rem;
-}
-
-@media screen and (min-width: 768px) {
-    .cards-list {
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 3rem;
-        padding: 0;
-    }
 }
 
 .card {
@@ -429,15 +427,29 @@ body.overflow{
     width: 4rem;
 }
 
-
 .card:hover {
     background-color: #000;
 }
+
 .card:hover .card-ttl {
     color: var(--secondary-color);
 }
 
-/* PORTFOLIO */
+
+
+@media screen and (min-width: 768px) {
+    .cards-list {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem;
+        padding: 0;
+    }
+}
+
+
+
+
+
+                            /* PORTFOLIO */
 
 .portfolio-grid {
     display: grid;
