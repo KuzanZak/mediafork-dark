@@ -53,11 +53,42 @@ window.addEventListener("resize", function(event){
     if (window.innerWidth >= 768) resetNew();
 })
 
-// Services 
+ 
 const cardsList = document.getElementById("cards-list")
-console.log(cardsList)
+// console.log(cardsList)
 
+
+const pTimeText = "Our IT expert team is available 24 7 and will support you to solve your problem whenever it comes over."
+const pPhoneText = "Designers and developers work together to bring you unique and highly valuable web interfaces declined for all the digital devices available on the market."
+const pLightbulbText = "Web design trends are constantly changing. We are always looking for new ways to attract new customers to your business. Let the latest web trends inspire you."
+
+
+//Modal Web
+const iconWeb =  document.getElementById("icon-web");
+const divWeb =  document.getElementById("card-web");
+
+const iconWebCross = document.createElement("i")
+iconWebCross.classList.add("fa")
+iconWebCross.classList.add("fa-times")
+
+const pWeb = document.createElement("p");
+pWeb.innerText = "The most challenging part of your plan is to spread your ideas and services all over the world. Give us your trust!";
+// divWeb.insertBefore(pWeb, iconWeb)
+// divWeb.insertBefore(iconWebCross, iconWeb)
+
+const modalWeb = document.createElement("div");
+const liWeb = document.getElementById("li-web");
+liWeb.insertBefore(modalWeb, divWeb)
+modalWeb.appendChild(pWeb)
+modalWeb.appendChild(iconWebCross)
+modalWeb.classList.add("card-modal")
+
+const titleWeb = document.querySelector("#card-web .card-ttl")
+const titleWebNode = titleWeb.cloneNode(true);
 cardsList.addEventListener("click", function(event){
-    if (event.target.classList.contains("card card-ttl")) console.log("click");
+    if (event.target.classList.contains("card")) {
+        modalWeb.classList.toggle("display");
+        modalWeb.insertBefore(titleWebNode, pWeb)
+    }
 })
 
