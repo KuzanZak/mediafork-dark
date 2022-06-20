@@ -494,6 +494,7 @@ body.overflow{
     font-size: 3rem;
     width: 50vw;
     margin: 3rem auto;
+    text-align: center;
 }
 
 .card-modal:hover h3 {
@@ -531,6 +532,28 @@ body.overflow{
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 3rem;
         padding: 0;
+    }
+
+    .card-modal{
+        margin-left: 2.5rem;
+        margin-top: 3rem;
+        width: 135vh;
+        height: 40vh;
+    }
+
+    .card-modal h3{
+        width: 70vw;
+    }
+    
+    .card-icon-web{
+        width: 25vw;
+        margin-top: -3rem;
+        margin-left: 1rem;
+    }
+    
+    .card-modal p{
+        width: 60vw;
+        margin: 5rem auto;
     }
 }
 
