@@ -157,6 +157,10 @@ function crossLightbulb(){
     iconLightbulbCross.classList.add("position");
 }
 
+function overflow(){
+    document.body.classList.toggle("overflow")
+}
+
 cardsList.addEventListener("click", function(event){
     if (event.target == document.getElementById("card-web")) {
         modalWeb.classList.toggle("display");
@@ -164,6 +168,7 @@ cardsList.addEventListener("click", function(event){
         crossWeb();
         iconWeb.classList.toggle("card-icon");
         iconWeb.classList.toggle("card-icon-web");
+        overflow();
     }
 })
 
@@ -172,10 +177,11 @@ cardsList.addEventListener("click", function(event){
         modalTime.classList.toggle("display");
         modalTime.insertBefore(titleTimeNode, pTime);
         modalTime.style.marginLeft="-27.7rem";
-        iconTime.style.marginLeft= "-30rem"
+        iconTime.classList.toggle("position-time")
         crossTime();
         iconTime.classList.toggle("card-icon");
         iconTime.classList.toggle("card-icon-web");
+        overflow();
     }
 });
 
@@ -188,6 +194,7 @@ cardsList.addEventListener("click", function(event){
         crossPhone();
         iconPhone.classList.toggle("card-icon");
         iconPhone.classList.toggle("card-icon-web");
+        overflow();
     }
 });
 
@@ -196,11 +203,16 @@ cardsList.addEventListener("click", function(event){
         modalLightbulb.classList.toggle("display");
         modalLightbulb.insertBefore(titleLightbulbNode, pLightbulb);
         modalLightbulb.style.marginTop= "-40rem"
-        iconLightbulb.style.marginTop= "-20rem"
         modalLightbulb.style.marginLeft="-27.7rem"
-        iconLightbulb.style.marginLeft= "-30rem"
+        iconLightbulb.style.marginTop= "-20rem"
+        iconLightbulb.classList.toggle("position-lightbulb")
         crossLightbulb();
         iconLightbulb.classList.toggle("card-icon");
         iconLightbulb.classList.toggle("card-icon-web");
+        overflow();
     }
 });
+
+// liLightbulb.addEventListener("click", function(event){
+//     if (event.target == document.getElementById("card-lightbulb")) this.classList.remove("display");;
+// })
