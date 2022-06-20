@@ -56,7 +56,8 @@ window.addEventListener("resize", function(event){
 // Services 
 const cardsList = document.getElementById("cards-list")
 console.log(cardsList)
+
 cardsList.addEventListener("click", function(event){
-    if (event.target.classList.contains("card")) console.log("click");
+    if (event.target.classList.contains("card card-ttl")) console.log("click");
 })
 
