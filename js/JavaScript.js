@@ -58,8 +58,7 @@ const cardsList = document.getElementById("cards-list")
 // console.log(cardsList)
 
 
-const pTimeText = "Our IT expert team is available 24 7 and will support you to solve your problem whenever it comes over."
-const pPhoneText = "Designers and developers work together to bring you unique and highly valuable web interfaces declined for all the digital devices available on the market."
+
 const pLightbulbText = "Web design trends are constantly changing. We are always looking for new ways to attract new customers to your business. Let the latest web trends inspire you."
 
 
@@ -85,21 +84,123 @@ const titleWebNode = document.querySelector("#card-web .card-ttl").cloneNode(tru
 // titleWebNode.classList.add("card-ttl");
 // const iconWebNode = document.getElementById("icon-web").cloneNode(true);
 
+
+                            // Modal-time
+const divTime =  document.getElementById("card-time");
+const iconTime =  document.getElementById("icon-time");
+
+const iconTimeCross =  document.createElement("i");
+
+const pTime = document.createElement("p")
+pTime.innerText = "Our IT expert team is available 24 7 and will support you to solve your problem whenever it comes over."
+
+const modalTime = document.createElement("div");
+const liTime = document.getElementById("li-time");
+liTime.insertBefore(modalTime, divTime)
+modalTime.appendChild(pTime)
+modalTime.appendChild(iconTimeCross)
+modalTime.classList.add("card-modal")
+
+const titleTimeNode = document.querySelector("#card-time .card-ttl").cloneNode(true)
+
+// Modal-phone
+const divPhone = document.getElementById("card-phone");
+const iconPhone = document.getElementById("icon-phone");
+const iconPhoneCross = document.createElement("i");
+const pPhone = document.createElement("p");
+pPhone.innerText = "Designers and developers work together to bring you unique and highly valuable web interfaces declined for all the digital devices available on the market.";
+
+const modalPhone = document.createElement("div");
+const liPhone = document.getElementById("li-phone");
+liPhone.insertBefore(modalPhone, divPhone);
+modalPhone.appendChild(pPhone);
+modalPhone.appendChild(iconPhoneCross);
+modalPhone.classList.add("card-modal")
+
+const titlePhoneNode = document.querySelector("#card-phone .card-ttl").cloneNode(true);
+
+// Modal-lightbulb
+const divLightbulb = document.getElementById("card-lightbulb");
+const iconLightbulb = document.getElementById("icon-lightbulb");
+const iconLightbulbCross = document.createElement("i");
+const pLightbulb = document.createElement("p");
+pLightbulb.innerText = "Designers and developers work together to bring you unique and highly valuable web interfaces declined for all the digital devices available on the market.";
+
+const modalLightbulb = document.createElement("div");
+const liLightbulb = document.getElementById("li-lightbulb");
+liLightbulb.insertBefore(modalLightbulb, divLightbulb);
+modalLightbulb.appendChild(pLightbulb);
+modalLightbulb.appendChild(iconLightbulbCross);
+modalLightbulb.classList.add("card-modal")
+
+const titleLightbulbNode = document.querySelector("#card-phone .card-ttl").cloneNode(true);
+
+                            // Script
+function crossWeb(){
+    iconWebCross.classList.add("fa");
+    iconWebCross.classList.add("fa-times");
+    iconWebCross.classList.add("position");
+}
+function crossTime(){
+    iconTimeCross.classList.add("fa");
+    iconTimeCross.classList.add("fa-times");
+    iconTimeCross.classList.add("position");
+}
+function crossPhone(){
+    iconPhoneCross.classList.add("fa");
+    iconPhoneCross.classList.add("fa-times");
+    iconPhoneCross.classList.add("position");
+}
+function crossLightbulb(){
+    iconLightbulbCross.classList.add("fa");
+    iconLightbulbCross.classList.add("fa-times");
+    iconLightbulbCross.classList.add("position");
+}
+
 cardsList.addEventListener("click", function(event){
-    if (event.target.classList.contains("card")) {
+    if (event.target == document.getElementById("card-web")) {
         modalWeb.classList.toggle("display");
         modalWeb.insertBefore(titleWebNode, pWeb);
-
-        iconWebCross.classList.add("fa");
-        iconWebCross.classList.add("fa-times");
-        iconWebCross.classList.add("position");
-
+        crossWeb();
         iconWeb.classList.toggle("card-icon");
-        iconWeb.classList.toggle("card-icon-web")
-
-        // document.body.classList.remove("overflow");
-        // modalWeb.insertBefore(iconWebNode, iconWebCross)
-
+        iconWeb.classList.toggle("card-icon-web");
     }
 })
 
+cardsList.addEventListener("click", function(event){
+    if (event.target == document.getElementById("card-time")) {
+        modalTime.classList.toggle("display");
+        modalTime.insertBefore(titleTimeNode, pTime);
+        modalTime.style.marginLeft="-27.7rem";
+        iconTime.style.marginLeft= "-30rem"
+        crossTime();
+        iconTime.classList.toggle("card-icon");
+        iconTime.classList.toggle("card-icon-web");
+    }
+});
+
+cardsList.addEventListener("click", function(event){
+    if (event.target == document.getElementById("card-phone")) {
+        modalPhone.classList.toggle("display");
+        modalPhone.insertBefore(titlePhoneNode, pPhone);
+        modalPhone.style.marginTop= "-40rem"
+        iconPhone.style.marginTop= "-20rem"
+        crossPhone();
+        iconPhone.classList.toggle("card-icon");
+        iconPhone.classList.toggle("card-icon-web");
+    }
+});
+
+cardsList.addEventListener("click", function(event){
+    if (event.target == document.getElementById("card-lightbulb")) {
+        modalLightbulb.classList.toggle("display");
+        modalLightbulb.insertBefore(titleLightbulbNode, pLightbulb);
+        modalLightbulb.style.marginTop= "-40rem"
+        iconLightbulb.style.marginTop= "-20rem"
+        modalLightbulb.style.marginLeft="-27.7rem"
+        iconLightbulb.style.marginLeft= "-30rem"
+        crossLightbulb();
+        iconLightbulb.classList.toggle("card-icon");
+        iconLightbulb.classList.toggle("card-icon-web");
+    }
+});
