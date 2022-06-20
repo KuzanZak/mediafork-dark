@@ -68,8 +68,6 @@ const iconWeb =  document.getElementById("icon-web");
 const divWeb =  document.getElementById("card-web");
 
 const iconWebCross = document.createElement("i")
-iconWebCross.classList.add("fa")
-iconWebCross.classList.add("fa-times")
 
 const pWeb = document.createElement("p");
 pWeb.innerText = "The most challenging part of your plan is to spread your ideas and services all over the world. Give us your trust!";
@@ -83,12 +81,25 @@ modalWeb.appendChild(pWeb)
 modalWeb.appendChild(iconWebCross)
 modalWeb.classList.add("card-modal")
 
-const titleWeb = document.querySelector("#card-web .card-ttl")
-const titleWebNode = titleWeb.cloneNode(true);
+const titleWebNode = document.querySelector("#card-web .card-ttl").cloneNode(true);
+// titleWebNode.classList.add("card-ttl");
+// const iconWebNode = document.getElementById("icon-web").cloneNode(true);
+
 cardsList.addEventListener("click", function(event){
     if (event.target.classList.contains("card")) {
         modalWeb.classList.toggle("display");
-        modalWeb.insertBefore(titleWebNode, pWeb)
+        modalWeb.insertBefore(titleWebNode, pWeb);
+
+        iconWebCross.classList.add("fa");
+        iconWebCross.classList.add("fa-times");
+        iconWebCross.classList.add("position");
+
+        iconWeb.classList.toggle("card-icon");
+        iconWeb.classList.toggle("card-icon-web")
+
+        // document.body.classList.remove("overflow");
+        // modalWeb.insertBefore(iconWebNode, iconWebCross)
+
     }
 })
 
